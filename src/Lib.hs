@@ -4,7 +4,8 @@ module Lib
         Puzzle (Puzzle),
         computeAnswer,
         printAnswer,
-        parseIntList
+        parseIntList,
+        parseStringList
     ) where
 import System.IO
 
@@ -36,6 +37,9 @@ parseIntList content = do
     let intList = map read ls :: [Int]
     return intList
 
+parseStringList :: String -> IO [String]
+parseStringList content = do
+    return $ lines content
 
 
 
